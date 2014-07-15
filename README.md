@@ -1,0 +1,58 @@
+Instabart apps (Android and iOS)
+==============
+
+This is a Cordova based project that wraps the Instabart code into a native app.
+
+## Getting started
+-  Clone the app repository
+  1. `git clone https://github.com/mortenvn/instabart-apps.git`
+
+- Clone the [main instabart repository](https://github.com/mortenvn/instabart.git). This is the same repo that is used at instabart.no
+  2. `cd instabart-apps`
+  3. `git clone https://github.com/mortenvn/instabart.git www`
+
+- From the www folder, install grunt dependencies and generate production code
+  4. `cd www`
+  5. `npm install`
+  6. `npm install -g grunt-cli` (might need sudo)
+  7. `grunt phone`
+
+- Install the Cordova CLI, generate android and iOS projects and manually add custom app files
+  7. `npm install -g cordova` (might need sudo)
+  8. `cordova add platform android`
+  9. `cordova add platform ios`
+  10. Manually copy files from the **config** folder into the correct platform folders (Example: **config/android/AndroidManifest.xml**  ->  **platforms/android/AndroidManifest.xml**)
+
+## Test the app!
+- **Test in emulator:** `cordova emulate [android|ios]`
+- **Test using USB connected phone:** `cordova run [android|ios]`
+
+## Updating the "www" files
+As the [main project](https://github.com/mortenvn/instabart.git) evolves, the **www** files in the cordova project will have to be updated. Luckily, since we just cloned the project, getting the newest files is super easy.
+
+From the **www** folder:
+
+1. `grunt`
+2. `git pull origin master`
+3. `grunt phone`
+
+## Generating production files
+### Android
+#### First time setup
+First time you want to create a production .apk, do the following steps. By doing this you will be able to generate a release version of the APK, [sign it and zipalign it](http://developer.android.com/tools/publishing/app-signing.html) using just **one** command.
+
+1. `cd PROJECT_ROOT/platforms/android`
+2.  `touch ant.properties`
+3.  Open the newly created **ant.properties** and add the following lines: 
+   - `key.store=/PATH/TO/KEYSTORE`
+   - `key.alias=instabart`
+
+#### Normal rutine
+1. Open `config/android/AndroidManifest.xml` and increment the **versionName** and **versionCode**
+2. `git add config/android/AndroidManifest.xml && git commit -m "Something smart"``
+3. `cordova build android --release`
+
+This will create a **Instabart-release.apk** file in the folder **platforms/android/ant-build**. We're done!
+
+### iOS
+Coming to a markdown document near you soon.
