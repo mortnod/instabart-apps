@@ -48,8 +48,8 @@ First time you want to create a production .apk, do the following steps. By doin
    - `key.alias=instabart`
 
 #### Normal rutine
-1. Open `config/android/AndroidManifest.xml` and increment the **versionName** and **versionCode**
-2. `git add config/android/AndroidManifest.xml && git commit -m "Something smart"``
+1. Open `config.xml` and increment the **versionName** and **versionCode**
+2. `git add config.xml && git commit -m "Something smart"`
 3. `cordova build android --release`
 
 This will create a **Instabart-release.apk** file in the folder **platforms/android/ant-build**. We're done!
