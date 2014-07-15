@@ -1,0 +1,6 @@
+.DS_Store
+
+# Cordova specific
+platforms/*
+www
+plugins

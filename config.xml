@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.mvn.instabart" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Instabart</name>
+    <description>
+        Appen som dekker alle dine behov som student... bortsett fra kaffe.
+    </description>
+    <author email="morten@noddeland.no" href="http://mvn.no">
+        Morten Noddeland
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
