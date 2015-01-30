@@ -21,6 +21,7 @@ This is a Cordova based project that wraps the Instabart code into a native app.
   7. `npm install -g cordova` (might need sudo)
   8. `cordova add platform android`
   9. `cordova add platform ios`
+  10. For Android, manually update `AndroidManifest.xml` with the correct minSDKVersion. As of now, the proper value is `<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />`
 
 ## Test the app!
 - **Test in emulator:** `cordova emulate [android|ios]`
