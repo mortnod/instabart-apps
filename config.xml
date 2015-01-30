@@ -64,5 +64,6 @@
         <splash src="extra/ios/splashscreens/Default-Landscape-736h.png" width="2208" height="1242"/>
     </platform>
 
+    <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="10000" />
 </widget>
