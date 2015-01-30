@@ -21,7 +21,6 @@ This is a Cordova based project that wraps the Instabart code into a native app.
   7. `npm install -g cordova` (might need sudo)
   8. `cordova add platform android`
   9. `cordova add platform ios`
-  10. Manually copy files from the **config** folder into the correct platform folders (Example: **config/android/AndroidManifest.xml**  ->  **platforms/android/AndroidManifest.xml**)
 
 ## Test the app!
 - **Test in emulator:** `cordova emulate [android|ios]`
