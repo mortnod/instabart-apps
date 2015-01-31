@@ -50,9 +50,24 @@ First time you want to create a production .apk, do the following steps. By doin
 #### Normal rutine
 1. Open `config.xml` and increment the **versionName** and **versionCode**
 2. `git add config.xml && git commit -m "Something smart"`
-3. `cordova build android --release`
+3. Delete the `node_modules` folder from www. By doing this you reduce the app file size by approx. 20 MB.
+4. `cordova build android --release`
+5. Restore the `node_modules` folder
 
 This will create a **Instabart-release.apk** file in the folder **platforms/android/ant-build**. We're done!
 
 ### iOS
-Coming to a markdown document near you soon.
+#### First time setup
+1. Install dependencies `sudo npm install -g ios-deploy` and
+`sudo npm install -g ios-sim`
+2. Click on `Instabart.xcodeproj` to open the project in Xcode
+3. Select "Team" under General -> Identity ->
+Team -> Morten V Noddeland (morten@noddeland.no)
+4. Set "Code Signing under Build settings -> Code Signing -> Release -> "iPhone Distribution: Morten V Noddeland"
+
+#### Normal rutine
+1. Open `config.xml` and increment the **versionName** and **versionCode**
+2. `git add config.xml && git commit -m "Something smart"`
+3. Delete the `node_modules` folder from www. By doing this you reduce the app file size by approx. 20 MB.
+4. Open project in Xcode, then click Product -> Archive
+5. Restore the `node_modules` folder
