@@ -4,25 +4,34 @@ Instabart apps (Android and iOS)
 This is a Cordova based project that wraps the Instabart code into a native app.
 
 ## Getting started
--  Clone the app repository
-    1. `git clone https://github.com/mortenvn/instabart-apps.git`
-- Clone the [main instabart repository](https://github.com/mortenvn/instabart.git). This is the same repo that is used at instabart.no
-    2. `cd instabart-apps`
-    3. `git clone https://github.com/mortenvn/instabart.git www`
-- From the www folder, install grunt dependencies and generate production code
-    4. `cd www`
-    5. `npm install`
-    6. `npm install -g grunt-cli` (might need sudo)
-    7. `grunt phone`
+*  Clone the app repository
+    * `git clone https://github.com/mortenvn/instabart-apps.git`
+
+
+* Clone the [main instabart repository](https://github.com/mortenvn/instabart.git). This is the same repo that is used at instabart.no
+    * `cd instabart-apps`
+    * `git clone https://github.com/mortenvn/instabart.git www`
+
+
+* From the www folder, install grunt dependencies and generate production code
+    * `cd www`
+    * `npm install`
+    * `npm install -g grunt-cli` (might need sudo)
+    * `grunt phone`
+
+
 - Install the Cordova CLI, generate android and iOS projects and manually add custom app files
-    7. `npm install -g cordova` (might need sudo)
-    8. `cordova add platform android`
-    9. `cordova add platform ios`
-    10. For Android, manually update `AndroidManifest.xml` with the correct minSDKVersion. As of now, the proper value is `<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />`
+    * `npm install -g cordova` (might need sudo)
+    * `cordova add platform android`
+    * `cordova add platform ios`
+    * For Android, manually update `AndroidManifest.xml` with the correct minSDKVersion. As of now, the proper value is `<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />`
+
+
 - Add Cordova plugins
-    11. `cordova plugin add cordova-plugin-statusbar`
-    12. `cordova plugin add cordova-plugin-device`
-    13. `cordova plugin add cordova-plugin-inappbrowser`
+    * `cordova plugin add cordova-plugin-statusbar`
+    * `cordova plugin add cordova-plugin-device`
+    * `cordova plugin add cordova-plugin-inappbrowser`
+
 
 ## Test the app!
 - **Test in emulator:** `cordova emulate [android|ios]`
