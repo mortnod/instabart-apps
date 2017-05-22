@@ -23,11 +23,17 @@ This is a Cordova based project that wraps the Instabart code into a native app.
   9. `cordova add platform ios`
   10. For Android, manually update `AndroidManifest.xml` with the correct minSDKVersion. As of now, the proper value is `<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />`
 
+- Add Cordova plugins
+  11. `cordova plugin add cordova-plugin-statusbar`
+  12. `cordova plugin add cordova-plugin-device`
+  13. `cordova plugin add cordova-plugin-inappbrowser`
+
 ## Test the app!
 - **Test in emulator:** `cordova emulate [android|ios]`
 - **Test using USB connected phone:** `cordova run [android|ios]`
 
-## Updating the "www" files
+## Updating the app
+### Get the newest version of Instabart
 As the [main project](https://github.com/mortenvn/instabart.git) evolves, the **www** files in the cordova project will have to be updated. Luckily, since we just cloned the project, getting the newest files is super easy.
 
 From the **www** folder:
@@ -36,11 +42,21 @@ From the **www** folder:
 2. `git pull origin master`
 3. `grunt phone`
 
+### Update Android SDK
+Run `android sdk` and download the newest versions of Android.
+
+### Update Cordova
+Run the following commands in terminal:
+`sudo npm update -g cordova`
+`cordova platform update android`
+`cordova platform update ios`
+
 ## Generating production files
 ### Android
 #### First time setup
 First time you want to create a production .apk, do the following steps. By doing this you will be able to generate a release version of the APK, [sign it and zipalign it](http://developer.android.com/tools/publishing/app-signing.html) using just **one** command.
 
+!!!UTDATERT!!!
 1. `cd PROJECT_ROOT/platforms/android`
 2.  `touch ant.properties`
 3.  Open the newly created **ant.properties** and add the following lines: 
