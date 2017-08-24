@@ -1,0 +1,23 @@
+{
+    "name": "com.mvn.instabart",
+    "version": "1.4.3",
+    "displayName": "Instabart",
+    "cordova": {
+        "platforms": [
+            "android"
+        ],
+        "plugins": {
+            "com.cmackay.plugins.googleanalytics": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-device": {},
+            "cordova-plugin-inappbrowser": {}
+        }
+    },
+    "dependencies": {
+        "com.cmackay.plugins.googleanalytics": "https://github.com/cmackay/google-analytics-plugin.git",
+        "cordova-android": "~6.2.3",
+        "cordova-plugin-device": "^1.1.6",
+        "cordova-plugin-inappbrowser": "^1.7.1",
+        "cordova-plugin-statusbar": "^2.2.3"
+    }
+}
